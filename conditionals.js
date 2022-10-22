@@ -17,7 +17,7 @@ console.log(result);
 var result = '';
 var a = 1;
 if (a > 0) {
-    result = a + ' is a positive number';
+    result = a + ' is a positive number bla';
 } else {
     result = a + ' is a negative number or zero';
 }
