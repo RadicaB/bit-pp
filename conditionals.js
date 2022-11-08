@@ -269,7 +269,7 @@ if (a > b) {
 
 var c = 60;
 var f = (9 * c / 5) + 32;
-console.log(c + "C" + " is " + f + "F");
+console.log(c + "°" + "C" + " is " + f + "°" + "F");
 
 //Task 7. Write a JavaScript program to get the difference between 13 and a given number, if the number is greater than 13 return double difference between that number and 13.
 //Sample Input: 11					Sample Input: 32
@@ -295,7 +295,7 @@ else {
 
 //Task 8. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.
 //Sample Input: 12, 5					Sample Input: 8, 8
-//Output : 17						Output : 48
+//Output : 17						    Output : 48
 
 var a = 12;
 var b = 5;
@@ -317,7 +317,7 @@ else {
 
 //Write a JavaScript program to check two given numbers and print “true” if one of the number is 50 or if their sum is 50.
 //Sample Input: 5,54			Sample Input: 6,50			Sample Input: 40,10
-//Output : -				Output : true				Output : true
+//Output : -				    Output : true				Output : true
 
 var a = 5;
 var b = 54;
@@ -342,7 +342,7 @@ else console.log("-");
 
 //Write a JavaScript program to check a given integer is within 20 of 100 or 400, and print range in which number belongs.
 //Sample Input: 13			Sample Input: 34			Sample Input: 256
-//Output : -				Output : 20 ⇔ 100			Output : 100 ⇔ 400
+//Output : -				Output : 20 ⇔ 100		   Output : 100 ⇔ 400
 var a = 13;
 if (a >= 20 && a <= 100) {
     console.log("a belongs to range 20 ⇔ 100");
@@ -369,3 +369,18 @@ else if (a >= 100 && a <= 400) {
     console.log("a belongs to range 100 ⇔ 400");
 }
 else { console.log("-"); }
+
+var a = 12;
+var result = 2;
+if ( product < 0) {
+    result = result +2;
+} else {
+    result = result -2;
+}
+console.log(result);
+
+var input = 0xA41;
+console.log(typeof input);
+
+var a = [2, 3, 'abc', 11, -7];
+console.log("Goodm mirnf");

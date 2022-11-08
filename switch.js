@@ -1,4 +1,4 @@
-var month = 4;
+var month = 2;
 var result = "";
 
 /*if (month === 1) { 
@@ -22,7 +22,7 @@ switch (month) {
         result = 'January';
         break;
     case 2:
-        result = 'February';
+        result = '2';
         break;
     case 3:
         result = 'March';
@@ -58,4 +58,5 @@ switch (CarBrand) {
     default:
         result = 'unknown brand';
 }
-console.log(result);
+console.log(2.10?'two':5>3?'five':'three');
+

@@ -35,7 +35,7 @@ console.log(banana_gr);
 var minute = 60;
 var Ana_kasni = 5 * minute;
 var Tom = 30 * minute;
-console.log(Ana_kasni, Tom);
+console.log("Ana kasni sekundi", Ana_kasni, ", Tom kasni sekundi", Tom);
 
 var USBstickKB = 4000000;
 var articleKB = 98;
@@ -64,7 +64,7 @@ console.log(d);
 var name = "Radmila";
 var _age = 37;
 var $cat = false;
-console.log(typeof name, typeof _age, typeof $cat);
+console.log(typeof(name), typeof(_age), typeof($cat));
 
 var a = "number";
 var b = true;
@@ -73,11 +73,28 @@ var d = "false";
 var e = 56;
 console.log(typeof a, typeof b, typeof c, typeof d, typeof e);
 
+var p = true;
+var q = true;
+console.log((p && q), (p || q));
+
+var p = true;
+var q = false;
+console.log((p && q), (p || q));
+
+var p = false;
+var q = true;
+console.log((p && q), (p || q));
+
+var p = false;
+var q = false;
+console.log((p && q), ( p || q));
+
 var a = 1;
 var b = 120;
 var age = 55;
-var result = age > 120;
-console.log(result);
+var result1 = age < a;
+var result2 = age > b;
+console.log(result1, result2);
 
 var safe = 60;
 var not_safe = 120;

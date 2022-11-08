@@ -71,5 +71,26 @@ var arr = [
     [7, 8, 9]
 ];
 
-delete arr[1];
 console.log(arr);
+
+console.log("312" == 312);
+console.log(typeof 2 + 3);
+
+var a = [[1, 2, 3], [4, 5, 6], 8, [9, 10]];
+console.log(a[3][0]);
+
+var x;
+var y = 5;
+console.log(x + "y=" + (x + y));
+
+
+console.log([2, 3, 4] == [2, 3, 4]);
+
+var array = ['s', 'c', 'r','i','p','t'];
+array.length = 0;
+console.log(array);
+
+var a = 10;
+var b = 5;
+var c = a || b++;
+console.log(10 * 'kcp');

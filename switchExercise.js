@@ -55,19 +55,19 @@ switch (day) {
 }
 console.log(result);
 
-var day = 'Sunday';
+var day = 2;
 var result = "";
 
 switch (day) {
-    case 'Monday':
-    case 'Tuesday':
-    case 'Wednesday':
-    case 'Thursday':
-    case 'Friday':
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
         result = 'It’s weekday';
         break;
-    case 'Saturday':
-    case 'Sunday':
+    case 6:
+    case 7:
         result = 'It’s weekend';
         break;
     default: result = 'Input must be number between 1 and 7';
