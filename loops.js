@@ -258,3 +258,5 @@ var x = ['1', 'A', 'B', "c", "r", true, NaN, undefined];
 var i = x.lenght - 1;
 
 console.log('Sum : ' + s + ' Product :  ' + p);
+
+

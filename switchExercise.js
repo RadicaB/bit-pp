@@ -142,7 +142,7 @@ switch (month) {
 }
 console.log(result);
 
-var month = 1;
+var month = 5;
 var result = '';
 
 switch (month) {

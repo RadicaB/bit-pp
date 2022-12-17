@@ -1,0 +1,161 @@
+//"strict mode";
+
+/*var a, b, c;
+var nesto;
+
+function sum(a, a) {
+    nesto = 33;
+    //var d;
+    console.log(nesto);
+    return a + a;
+}
+sum(2, 2);
+console.log(nesto);*/
+
+
+var z=33;
+
+function sum(x, y) {
+    var z = 44;
+    console.log(z);
+    return x + y;
+}
+sum(3, 2);
+console.log(z);  //kada unutar f-je stampamo - prvo idu lokalne onda globalne varijable, van f-je nisu dostupne variajable van funkcije, dostupne su nam samo spoljne
+                //unutar f-je su nam dostupne spoljen v, ali van nisu unutrasnje, x i y su lokalne varijable i one imaju prednost
+
+var scope = "global";
+function checkScope() { 
+    // declare a local variable with the same name
+    var scope = "local";
+    // return the local value, not the global one
+    return scope;
+}
+var result = checkScope() //=> "local"
+console.log(scope);
+console.log(result);
+
+var scope = "global";
+function checkScope2() { 
+    //we just changed the global variable
+    scope = "local";
+    // This implicitly declares a new global variable;
+    myScope = "local";
+    return [scope, myScope]; //return two values, imamo
+}
+checkScope2() // ["local", "local"] has side effects
+console.log(scope);
+console.log(myScope);
+
+var a = '20';
+function checkScope3() { 
+    //we just changed the global variable
+    a = '30';
+    // This implicitly declares a new global variable;
+    b = '30';
+    return [a, b]; //return two values, imamo
+}
+checkScope3() // ["local", "local"] has side effects
+console.log(a);
+console.log(b);
+
+
+var global = 123;
+
+function myFunc() {
+    console.log(global); //hoisiting-u prvoj liniji nemamo definisanu global - zato je prvo undefined, pa kad definisemo onda je 1
+    var global = 1;
+    console.log(global);
+ }
+myFunc();
+
+var myFunc = function () {
+    var global;
+    console.log(global);
+    var global = 1;
+    console.log(global);
+}
+myFunc();
+
+
+var month = [4,5,12,9];
+console.log(month.length);
+
+var n = 10;
+console.log(++n);
+
+function f(a,b) { 
+    return a + b;
+}
+console.log(f(12));
+
+
+
+for (var i = 3; i >= 0; i--)
+    console.log(i);
+
+var r = [4, 5, 12, 9];
+r.length = 2;
+ 
+console.log(r);
+
+var medd = '';
+var n = 4;
+while (n >= 0) { 
+    medd += '*';
+    n--;
+}
+console.log(medd);
+
+
+var isb = true;
+var isa = false;
+
+console.log(isa || isb);
+
+var result;
+result = f(4, 5, 32, 11);
+console.log(result);
+
+console.log(2 + true);
+
+var n = 23;
+n -= 2;
+console.log(n);
+
+/*1.	Write a function to count vowels in a provided string. Vowels are a, e, i, o, and u as well as A, E, I, O, and U. */
+
+var vowels = 'samoglasniciIZbesvEsti';
+
+function countW(vowels) { 
+    var result = 0;
+    for (i = 0; i < vowels.length; i++) {
+        if (vowels[i] === 'a' || vowels[i] === 'e' || vowels[i] === 'i' || vowels[i] === 'o' || vowels[i] === 'u' || vowels[i] === 'A' || vowels[i] === 'E' || vowels[i] === 'I' || vowels[i] === 'O' || vowels[i] === 'U') { result++; }
+    }
+    return result;
+}
+console.log(countW(vowels));
+
+//2.Write a function that combines two arrays by alternatingly taking elements. [‘a’,’b’,’c’], [1,2,3] -> [‘a’,1,’b’,2,’c’,3]
+
+
+function combineArr(arr1, arr2) { 
+    var output = [];
+    for (i = 0; j = 0; i < arr1.length, j < arr2.length, i++, j++) {
+        output += arr1[i] +',' + arr2[j] + ',';
+    }
+    return output;
+}
+
+var arr1 = ["a", "b", "c"];
+var arr2 = [1, 2, 3];
+
+console.log(combineArr(arr1, arr2));
+
+
+//3.Write a function that rotates a list by k elements.
+
+function combineArr(array, k) { 
+    var output = [];
+    for (i = k; j = array.length - k; i < array.length + k; i++, j++) { }
+}  

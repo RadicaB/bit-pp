@@ -336,23 +336,70 @@ console.log(stringOrNot(a));
 
 //2. Write a function to check whether a string is blank or not.
 
-var arr = ["My random string", "", 12, false];
-/*var b = "";
-var c = 12;
-var d = false;*/
-result = [];
+var a = "My random string";
 
-function stringEmpty(arr) { 
-    for (var i = 0; i < arr.length; i++) { 
-        if (a[i] == 'string') { 
+function stringEmpty(a) {
+    for (var i = 0; i < a.length; i++) {
+        if (typeof (a) == 'string' && a == " ") {
             result = 'true';
         } else {
             result = 'false';
         }
-        return (result)
+        return result;
     }
-} 
+}
+var b = " ";
+var c = 12;
+var d = 'false';
+console.log(stringEmpty(d));
 
-var arr = ["My random string", "", 12, false];
-console.log(stringEmpty(arr[i]));
+//3.Write a function that concatenates a given string n times (default is 1).
+
+var a = 'Ha';
+var n = 5;
+
+
+function concatenatesHa(a,n) { 
+    result = '';
+    for (var i = 0; i < n; i++) {
+        if (typeof(a) == 'string') {
+            result += a;
+        } 
+    }  return result;
+} 
+console.log(concatenatesHa(a,n));
+
+
+//4.Write a function to count the number of letter occurrences in a string.
+
+var random = 'Mine random string and nanny';
+
+function numberOfOccurrences(random) { 
+    /*console.log(b.length);*/
+    sum = 0;
+    for (var i = 0; i < random.length; i++) { 
+        /*console.log(b[i]);*/
+
+        if (random[i] === 'n' || random[i] === 'N') {
+            sum += 1;
+            /*console.log(sum);*/
+        }
+        else { }
+    } return sum;
+}
+
+console.log(numberOfOccurrences(random));
+
+
+/*1.	Write a program to insert a string within a string at a particular position (default is 1, beginning of a string).
+
+"My random string", "JS " -> "JS My random string"
+"My random string", "JS ", 10 -> "My random JS string"*/
+
+var array = [];
+for (var i = 0; i < 4; i++) { 
+    array[2 * i] = i;
+    array[2 * i + 1] = i;
+}
+console.log(array);
 
