@@ -94,3 +94,11 @@ var a = 10;
 var b = 5;
 var c = a || b++;
 console.log(10 * 'kcp');
+
+
+var months = ['january', 'february'];
+var a = 2;
+var b = 3;
+
+console.log(month[2]);
+console.log(month[3]);

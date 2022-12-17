@@ -1,0 +1,21 @@
+/*.strong-paragraph {
+    color: tomato;
+}
+.colored-list {
+    background-color: aqua;
+}
+*/
+
+.redText {
+    color: rgb(236, 108, 108);
+}
+.blueBckrgd {
+    background-color: rgb(100, 135, 231);
+}
+.upperCase {
+    background-color: rgb(161, 85, 155);
+    text-transform: uppercase;
+}
+.active {
+    background-color: rgb(247, 247, 148);
+}
