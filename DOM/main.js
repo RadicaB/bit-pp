@@ -97,23 +97,10 @@ console.log(htmlNode.nodeName);
 console.log(htmlNode.attributes);
 console.log(htmlNode.id);
 console.log(htmlNode.className);
-
+__________________________________________________________________________________
 */
 
-//document.documentElement.tagName
-
-/*var htmlNode = document.documentElement;
-console.log('htmlNode:', htmlNode);
-
-document.getElementByClass('exerciseListDuo');
-
-var divexerciseListDuoNode = NodeList[2];
-console.log(divexerciseListDuoNode);
-
-div.exerciseListDuo = 'colored-list';
-
-var secondLiNode = document.getElementsByClassName('exerciseListDuo');*/
-
+//1. Selecting One/Multiple Elements
 function addBackgroundToList() { 
     //prvo selektujemo drugu listu  - querySelectorAll vraca sve elemente koji odgovaraju selektoru u zagradi
     //document.querySelectorAll('ul')
@@ -148,6 +135,8 @@ function thirdUpperCase() {
     thirdList.classList.add('upperCase');
 }
 thirdUpperCase();
+
+//2.Traversing
 
 function createActive() { 
     var allList = document.querySelectorAll('ul');
@@ -186,6 +175,34 @@ function moveActive() {
 }
 moveActive();
 
+//3.Access/Update Text Node
+function alertText() { 
+    var sixthUl = document.querySelectorAll('ul');
+    console.log(sixthUl);
+    var navigation = sixthUl[5];
+    navigation.classList.add('sixthclass');
+    var allChildren = document.getElementsByClassName('sixthclass');
+    console.log(allChildren);
+    var alertChild = allChildren[0].children;
+    var sixthChild = alertChild[3];
+    console.log(sixthChild);
+    sixthChild.classList.add('alerttt');
+    window.prompt("Log in please");
+}
+alertText();
+
+function alert2() {
+    var sixthUl = document.querySelectorAll('ul');
+    var navigation = sixthUl[5];
+    var allChildren = document.getElementsByClassName('sixthclass');
+    var alertChild = allChildren[0].children;
+    var seventhChild = alertChild[4];
+    seventhChild.classList.add('changeText');
+    seventhChild.replaceWith('new text shell appear here');
+}
+alert2();
+
+
 var p = document.getElementById('clock');
 setInterval(function () {
     var now = new Date();
@@ -196,5 +213,46 @@ setInterval(function () {
     p.textContent = formattedTime;
 
 }, 1000);
-
 //console.log(hours + ':' + minutes + ':' + seconds);
+
+//4.InnerHTML
+
+//function create1stDropdown() {
+//    var firstSelectNode = document.querySelector('dropdown').innerHTML = "<select name='drop' id='drop1'><option value='1st option'>1st option</option><option value='2nd option'>2nd option</option><option value='3rd option'>3rd option</option></select>";
+//}create1stDropdown();
+
+function create2ndDropdown(array) {
+    var bodyNode = document.querySelector('body');
+    console.log(bodyNode);
+    var secondDivNode = Array.from(document.querySelectorAll('div')).pop();
+    var selectNode = document.createElement('select');
+    secondDivNode.appendChild(selectNode);
+    selectNode.setAttribute('id', 'drop2');
+    var optionNode = "";
+    for(var i = 0; i < array.length; i++) {
+        optionNode += ("<option>" + array[i] + "</option>");
+    }
+    document.getElementById('drop2').innerHTML = optionNode;
+}
+create2ndDropdown(['Meni 1', 'Meni 2', 'Meni 3'])
+
+function createSelect(options) {
+	var dropdown = document.getElementById('header');
+	var selectNode = document.createElement('select');
+
+	for (var i = 0; i < options.length; i++) {
+		var optionNode = document.createElement('option');
+		optionNode.textContent = options[i]
+		selectNode.appendChild(optionNode)
+	}
+	header.appendChild(selectNode)	
+}
+createSelect(['Option 1', 'Option 2', 'Option 3']);
+
+//5.Attributes
+function formManipulation() { 
+    var formNode = document.querySelector('form');
+    console.log(formNode);
+    formNode
+}
+formManipulation();
